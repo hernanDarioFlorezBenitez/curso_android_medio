@@ -30,3 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavView.setupWithNavController(navController)
     }
 }
+
+
+
+//1:26:49
