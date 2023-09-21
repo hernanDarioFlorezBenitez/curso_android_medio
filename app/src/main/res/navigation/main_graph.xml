@@ -9,7 +9,11 @@
         android:id="@+id/horoscopoFragment"
         android:name="com.example.horoscopoapp.ui.horoscopo.horoscopoFragment"
         android:label="fragment_horoscopo"
-        tools:layout="@layout/fragment_horoscopo" />
+        tools:layout="@layout/fragment_horoscopo" >
+        <action
+            android:id="@+id/action_horoscopoFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
     <fragment
         android:id="@+id/palmistryFragment"
         android:name="com.example.horoscopoapp.ui.palmistry.palmistryFragment"
@@ -20,4 +24,14 @@
         android:name="com.example.horoscopoapp.ui.luck.luckFragment"
         android:label="fragment_luck"
         tools:layout="@layout/fragment_luck" />
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.example.horoscopoapp.ui.datail.DetailActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail" >
+        <argument
+            android:name="type"
+            app:argType="com.example.horoscopoapp.domain.model.HoroscopoModel" />
+    </activity>
+    <action android:id="@+id/action_global_detailActivity" />
 </navigation>
